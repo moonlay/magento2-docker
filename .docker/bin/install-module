@@ -1,0 +1,10 @@
+
+composer require moonlay/module-customhome
+composer require moonlay/module-customregister
+composer require moonlay/module-customeditaccount
+composer require moonlay/theme-frontend-bateeq
+
+php bin/magento setup:upgrade
+php bin/magento setup:di:compile
+php bin/magento setup:static-content:deploy -f
+php bin/magento cache:clean
